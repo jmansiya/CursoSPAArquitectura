@@ -31,6 +31,8 @@ define(['router', 'handlebars', 'jquery'],
         /*
         Ejercicio 3.
          */
+        router.map({ route: '#films', module: 'films', title: 'Buscardor de peliculas', visible: true});
+        router.map({ route: '#viewDetailFilms/:title', module: 'viewDetailFilms', title: 'Detail film', visible: true});
         router.map({ route: '#view1/:param/:param2', module: 'view1', title: 'Vista 1', visible: true});
         router.map({ route: '#view2/:param/:param2', module: 'view2', title: 'Vista 2', visible: true });
         router.map({ route: '', module: 'default', title: 'Ejemplo', visible: false });

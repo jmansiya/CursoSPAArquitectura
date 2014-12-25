@@ -2,6 +2,7 @@
     
     var view2 = {
         render: function (template, params) {
+            debugger;
             return new $.Deferred(function (dfd) {
                 dfd.resolve(template(params));
             });

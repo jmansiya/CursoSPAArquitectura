@@ -54,5 +54,49 @@
 
         <a class="viewLink" href="">Volver</a>
     </script>
+
+    <script id="films" type="text/x-handlebars-template">
+        <div class="page-header">
+            <h1>Bienvenido als buscador de peliculas!</h1>
+        </div>
+
+        <input id="title" type="text" />
+        <a class="viewLink" href="#viewDetailFilms/:title">Buscar</a>
+    </script>
+
+    <script id="viewDetailFilms" type="text/x-handlebars-template">
+        <div class="page-header">
+            <h1>Película</h1>
+        </div>
+        <div class="panel-body">
+            {{#if Error}}
+            <p>{{Error}}</p>
+            {{else}}
+            <div class="media">
+                {{#if hasMoviePic}}
+                <a class="pull-left" href="#">
+                    <img src="{{Poster}}" alt="{{Title}}" class="media-object img-rounded" style="height: 206px;" />
+                </a>
+                {{/if}}
+                <div class="media-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h4 class="media-heading">{{Title}}</h4>
+                        </li>
+                        <li class="list-group-item">{{Year}} </li>
+                        <li class="list-group-item">{{Genre}} </li>
+                        <li class="list-group-item">{{Director}} </li>
+                        <li class="list-group-item">{{Plot}} </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            {{/if}}
+        </div>
+
+        <a class="viewLink" href="">Volver</a>
+    </script>
+
 </body>
 </html>
