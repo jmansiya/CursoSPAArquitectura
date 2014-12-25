@@ -2,9 +2,57 @@
 <html>
 <head>
     <title>Curso SPA Architecture</title>
+    <link rel="stylesheet" href="content/bootstrap.min.css">
 </head>
 <body>
-    <div id="container"></div>
+    <div class="container">
+        <div class="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="#">Ejercicios</a>
+            </div>
+        </div>
+        <div id="container" class="container">
+        </div>
+    </div>
+
     <script type="text/javascript" src="scripts/require.js" data-main="App/mainApp"></script>
+
+    <script id="default" type="text/x-handlebars-template">
+        <div class="page-header">
+            <h1>Bienvenido!</h1>
+        </div>
+
+        <input id="paramIn" type="text" />
+        <input id="parametro2" type="text" />
+
+        <ul class="nav nav-pills">
+            {{#routes}}
+            {{#if visible}}
+            <li><a class="viewLink" href="{{ route }}">{{title}}</a></li>
+            {{/if}}
+            {{/routes}}
+        </ul>
+
+    </script>
+
+    <script id="view1" type="text/x-handlebars-template">
+        <div class="page-header">
+            <h1>Vista 1</h1>
+        </div>
+        <p class="lead">Ha recibido <strong>{{param}}</strong></p>
+        <p class="lead">Ha recibido un segundo parametro <strong>{{param2}}</strong></p>
+
+        <a class="viewLink" href="">Volver</a>
+    </script>
+
+    <script id="view2" type="text/x-handlebars-template">
+        <div class="page-header">
+            <h1>Vista 2</h1>
+        </div>
+        <p class="lead"> Ha recibido <strong> {{ param }}</strong></p>
+        <p class="lead">Ha recibido un segundo parametro <strong>{{param2}}</strong></p>
+
+        <a class="viewLink" href="">Volver</a>
+    </script>
 </body>
 </html>
