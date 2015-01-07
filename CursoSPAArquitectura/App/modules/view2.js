@@ -1,4 +1,4 @@
-﻿define(function () {
+define(function () {
     
     var view2 = {
         render: function (template, params) {

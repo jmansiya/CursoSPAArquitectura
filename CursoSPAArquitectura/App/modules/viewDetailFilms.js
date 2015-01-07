@@ -1,4 +1,4 @@
-﻿define(['../../data/dataService'], function (dataService) {
+define(['../../data/dataService'], function (dataService) {
     
     var viewDetailFilms = {
         render: function (template, params) {
@@ -9,7 +9,7 @@
                     }
                     dfd.resolve(template(res));
                 });
-            });
+            }).promise();
         }
     };
     return viewDetailFilms;

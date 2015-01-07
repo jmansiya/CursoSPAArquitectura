@@ -1,4 +1,4 @@
-﻿define(['router'], function (router) {
+define(['router'], function (router) {
 
     var def = {
         render: function (template) {
