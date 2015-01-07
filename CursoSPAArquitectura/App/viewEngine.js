@@ -1,4 +1,4 @@
-﻿define(function () {
+define(function () {
     var container = $("#container");
     var compiledViews = {};
     var viewEngine = {
